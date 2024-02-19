@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Search from "./Search";
 
-function Header() {
+function Header({handleFilter, handleChange, value}) {
+  
+
+  
   return (
     <header>
       <h1>
@@ -10,7 +13,7 @@ function Header() {
         </span>
         gregslist
       </h1>
-      <Search />
+      <Search handleFilter={handleFilter} value={value} handleChange={handleChange} />
     </header>
   );
 }

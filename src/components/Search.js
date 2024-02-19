@@ -1,6 +1,6 @@
 import React from "react";
 
-function Search() {
+function Search({value, handleFilter, handleChange}) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log("submitted");
@@ -12,10 +12,10 @@ function Search() {
         type="text"
         id="search"
         placeholder="search free stuff"
-        value={""}
-        onChange={(e) => console.log(e.target.value)}
+        value={value}
+        onChange={handleChange}
       />
-      <button type="submit">🔍</button>
+      <button onClick={handleFilter}  type="submit">🔍</button>
     </form>
   );
 }
